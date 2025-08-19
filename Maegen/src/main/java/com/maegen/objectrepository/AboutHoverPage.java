@@ -12,7 +12,7 @@ public class AboutHoverPage {
 		PageFactory.initElements(driver, this);
 	}
 	@FindBy(xpath="//p[text()='Our Story']")
-	private WebElement CoastersLnk;
+	private WebElement StoryLnk;
 	@FindBy(xpath="//p[text()='Contact Us']")
 	private WebElement ContactUsLnk;
 	@FindBy(xpath="//p[text()='Become A Stockist']")
@@ -20,8 +20,8 @@ public class AboutHoverPage {
 	public WebDriver getDriver() {
 		return driver;
 	}
-	public WebElement getCoastersLnk() {
-		return CoastersLnk;
+	public WebElement getStoryLnk() {
+		return StoryLnk;
 	}
 	public WebElement getContactUsLnk() {
 		return ContactUsLnk;
@@ -30,5 +30,8 @@ public class AboutHoverPage {
 		return StockistLnk;
 	}
 	
-	
+	public String title() {
+		String ti = driver.getTitle();
+		return ti;
+	}
 }

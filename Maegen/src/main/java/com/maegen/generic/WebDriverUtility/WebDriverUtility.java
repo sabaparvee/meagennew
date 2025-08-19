@@ -59,6 +59,13 @@ public class WebDriverUtility {
 		return ele;
 
 	}
+	public WebElement ExplicitWaitrefreshed(WebDriver driver,WebElement element) {
+		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+         WebElement freshElement = wait.until(ExpectedConditions.refreshed(
+                 ExpectedConditions.elementToBeClickable(element)
+         ));
+         return freshElement;
+	}
 	
 	public void ExplicitWaitForElementByLocator(WebDriver driver,String path) {
 		 WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
@@ -137,6 +144,7 @@ public class WebDriverUtility {
 		Actions action=new Actions(driver);
 		action.moveToElement(element).perform();
 	}
+	
 	public void doubleClick(WebDriver driver,WebElement element) {
 		Actions action=new Actions(driver);
 		action.doubleClick(element).perform();

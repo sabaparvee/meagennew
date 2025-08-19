@@ -13,7 +13,7 @@ import org.apache.poi.ss.usermodel.WorkbookFactory;
 
 public class ExcelUtility {
 	public String getStringDataFromExcel(String sheetName,int rownum,int cellnum) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./testdata/data.xlsx");
+		FileInputStream fis=new FileInputStream("./testdata/Maegendata.xlsx");
 		 Workbook wb=WorkbookFactory.create(fis);
 		 String data=wb.getSheet(sheetName).getRow(rownum).getCell(cellnum).getStringCellValue();
 		 wb.close();
@@ -21,7 +21,7 @@ public class ExcelUtility {
 		 return data;	
 	}
 	public void getMultipleStringDataFromExcel(String sheetName) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./testdata/data.xlsx");
+		FileInputStream fis=new FileInputStream("./testdata/Maegendata.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet s=wb.getSheet("sheetName");
 		int rowcount=s.getLastRowNum();
@@ -42,7 +42,7 @@ public class ExcelUtility {
 		}
 	}
 	public int getIntDataFromExcel(String sheetName,int rownum,int cellnum) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./testdata/data.xlsx");
+		FileInputStream fis=new FileInputStream("./testdata/Maegendata.xlsx");
 		 Workbook wb=WorkbookFactory.create(fis);
 		 int data=(int) wb.getSheet(sheetName).getRow(rownum).getCell(cellnum).getNumericCellValue();
 		 wb.close();
@@ -50,7 +50,7 @@ public class ExcelUtility {
 		 return data;	
 	}
 	public int getRow(String sheetName,int rownum,int cellnum) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./testdata/data.xlsx");
+		FileInputStream fis=new FileInputStream("./testdata/Maegendata.xlsx");
 		 Workbook wb=WorkbookFactory.create(fis);
 		 int rowcount=wb.getSheet(sheetName).getLastRowNum();
 		 wb.close();
@@ -59,10 +59,10 @@ public class ExcelUtility {
 	}
 	
 	public void setDataintoExcel(String sheetName,int rownum,int cellnum,String data) throws EncryptedDocumentException, IOException {
-		FileInputStream fis=new FileInputStream("./testdata/data.xlsx");
+		FileInputStream fis=new FileInputStream("./testdata/Maegendata.xlsx");
 		 Workbook wb=WorkbookFactory.create(fis);
 		 wb.getSheet(sheetName).getRow(rownum).createCell(cellnum);
-		 FileOutputStream fos =new  FileOutputStream("./testdata/data.xlsx");
+		 FileOutputStream fos =new  FileOutputStream("./testdata/Maegendata.xlsx");
 		 wb.write(fos);
 		 wb.close();
 	}

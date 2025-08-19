@@ -5,12 +5,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class FragranceHoverPage {
+import com.maegen.generic.WebDriverUtility.WebDriverUtility;
+
+public class FragranceHoverPage extends WebDriverUtility {
 	WebDriver driver=null;
 	public FragranceHoverPage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
+	
 	@FindBy(xpath="//a[text()='Diffusers']")
 	private WebElement DiffusersLnk;
 	@FindBy(xpath="//a[text()='Incense Sticks']")
@@ -27,9 +30,15 @@ public class FragranceHoverPage {
 	private WebElement AtinaCandlesLnk;
 	@FindBy(xpath="//p[text()='Pablo Pot']")
 	private WebElement PabloPotLnk;
+	@FindBy(xpath="//a[text()='Fragrance']")
+	private WebElement FragranceLnk;
 	public WebDriver getDriver() {
 		return driver;
 	}
+	public WebElement getFragranceLnk() {
+		return FragranceLnk;
+	}
+	
 	public WebElement getDiffusersLnk() {
 		return DiffusersLnk;
 	}
@@ -54,5 +63,6 @@ public class FragranceHoverPage {
 	public WebElement getPabloPotLnk() {
 		return PabloPotLnk;
 	}
+	
 	
 }

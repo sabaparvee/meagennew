@@ -49,4 +49,8 @@ public class GiftPage extends WebDriverUtility {
 		element.click();
 
 	}
+	public String title() {
+		String ti = driver.getTitle();
+		return ti;
+	}
 }

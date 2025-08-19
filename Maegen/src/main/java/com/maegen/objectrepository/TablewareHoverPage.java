@@ -11,8 +11,8 @@ public class TablewareHoverPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	@FindBy(xpath="//a[text()='Incense Holders']")
-	private WebElement IncenseLnk;
+	@FindBy(xpath="//a[text()='Coasters']")
+	private WebElement CoastersLnk;
 	@FindBy(xpath="//a[text()='Glassware']")
 	private WebElement GlasswareLnk;
 	@FindBy(xpath="//a[text()='Napkins']")
@@ -25,17 +25,12 @@ public class TablewareHoverPage {
 	private WebElement SaladserverLnk;
 	@FindBy(xpath="//a[text()='Shop All']")
 	private WebElement ShopAllLnk;
-	@FindBy(xpath="//p[text()='Atina Glassware']")
-	private WebElement AtinaGlasswareLnk;
-	@FindBy(xpath="//p[text()='Salt & Pepper Grinders']")
-	private WebElement SaltPepperLnk;
-	@FindBy(xpath="//p[text()='Embroided']")
-	private WebElement EmbroidedLnk;
+	
 	public WebDriver getDriver() {
 		return driver;
 	}
 	public WebElement getCoastersLnk() {
-		return IncenseLnk;
+		return CoastersLnk;
 	}
 	public WebElement getGlasswareLnk() {
 		return GlasswareLnk;
@@ -55,15 +50,7 @@ public class TablewareHoverPage {
 	public WebElement getShopAllLnk() {
 		return ShopAllLnk;
 	}
-	public WebElement getAtinaGlasswareLnk() {
-		return AtinaGlasswareLnk;
-	}
-	public WebElement getSaltPepperLnk() {
-		return SaltPepperLnk;
-	}
-	public WebElement getEmbroidedLnk() {
-		return EmbroidedLnk;
-	}
+	
 	
 
 }

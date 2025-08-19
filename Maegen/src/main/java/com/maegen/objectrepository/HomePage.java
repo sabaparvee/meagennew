@@ -92,5 +92,8 @@ public class HomePage extends WebDriverUtility {
 		String xpath="//button[@title='Close']";
 		ExplicitWaitForElementByLocator(driver,xpath);
 	}
+	public void Hover(WebElement ele) {
+		moveToElement(driver,ele);
+	}
 	
 }

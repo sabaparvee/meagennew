@@ -1,41 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="9" passed="9" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-08-15T19:53:52 IST" name="Default suite" finished-at="2025-08-15T19:54:16 IST" duration-ms="23887">
+  <suite started-at="2025-08-18T17:46:19 IST" name="Suite" finished-at="2025-08-18T17:51:08 IST" duration-ms="289398">
     <groups>
     </groups>
-    <test started-at="2025-08-15T19:53:52 IST" name="Default test" finished-at="2025-08-15T19:54:16 IST" duration-ms="23887">
-      <class name="Fragrance.FragranceTest">
-        <test-method is-config="true" signature="configBS()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:53:52 IST" name="configBS" finished-at="2025-08-15T19:53:52 IST" duration-ms="502" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBS -->
-        <test-method is-config="true" signature="configBC()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:53:52 IST" name="configBC" finished-at="2025-08-15T19:53:56 IST" duration-ms="3726" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- configBC -->
-        <test-method is-config="true" signature="configBM()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:53:56 IST" name="configBM" finished-at="2025-08-15T19:53:56 IST" duration-ms="1" status="PASS">
+    <test started-at="2025-08-18T17:46:19 IST" name="Test" finished-at="2025-08-18T17:51:08 IST" duration-ms="289398">
+      <class name="SmokeTesting.SmokeTest">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:SmokeTesting.SmokeTest@77f1baf5]" started-at="2025-08-18T17:49:51 IST" name="configBM" finished-at="2025-08-18T17:49:56 IST" duration-ms="5130" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configBM -->
-        <test-method signature="fTest()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:53:56 IST" name="fTest" finished-at="2025-08-15T19:54:16 IST" duration-ms="20109" status="PASS">
+        <test-method signature="SmokeAddCart()[pri:0, instance:SmokeTesting.SmokeTest@77f1baf5]" started-at="2025-08-18T17:49:56 IST" name="SmokeAddCart" finished-at="2025-08-18T17:50:13 IST" duration-ms="16153" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- fTest -->
-        <test-method is-config="true" signature="configAM()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:54:16 IST" name="configAM" finished-at="2025-08-15T19:54:16 IST" duration-ms="2" status="PASS">
+        </test-method> <!-- SmokeAddCart -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:SmokeTesting.SmokeTest@77f1baf5]" started-at="2025-08-18T17:50:13 IST" name="configAM" finished-at="2025-08-18T17:50:13 IST" duration-ms="861" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAM -->
-        <test-method is-config="true" signature="configAC()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:54:16 IST" name="configAC" finished-at="2025-08-15T19:54:16 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:SmokeTesting.SmokeTest@77f1baf5]" started-at="2025-08-18T17:50:13 IST" name="configBM" finished-at="2025-08-18T17:50:19 IST" duration-ms="5457" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- configAC -->
-        <test-method is-config="true" signature="configAS()[pri:0, instance:Fragrance.FragranceTest@b3ca52e]" started-at="2025-08-15T19:54:16 IST" name="configAS" finished-at="2025-08-15T19:54:16 IST" duration-ms="5" status="PASS">
+        </test-method> <!-- configBM -->
+        <test-method signature="SmokeRemoveFromCart()[pri:0, instance:SmokeTesting.SmokeTest@77f1baf5]" started-at="2025-08-18T17:50:19 IST" name="SmokeRemoveFromCart" finished-at="2025-08-18T17:50:37 IST" duration-ms="17703" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SmokeRemoveFromCart -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:SmokeTesting.SmokeTest@77f1baf5]" started-at="2025-08-18T17:50:37 IST" name="configAM" finished-at="2025-08-18T17:50:38 IST" duration-ms="864" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+      </class> <!-- SmokeTesting.SmokeTest -->
+      <class name="Fragrance.FragranceTest">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:47:58 IST" name="configBM" finished-at="2025-08-18T17:48:03 IST" duration-ms="5837" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="FragrancewithCategory()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:48:03 IST" name="FragrancewithCategory" finished-at="2025-08-18T17:48:34 IST" duration-ms="30305" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- FragrancewithCategory -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:48:34 IST" name="configAM" finished-at="2025-08-18T17:48:35 IST" duration-ms="930" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:48:35 IST" name="configBM" finished-at="2025-08-18T17:48:40 IST" duration-ms="5542" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="fTest()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:48:40 IST" name="fTest" finished-at="2025-08-18T17:49:09 IST" duration-ms="28995" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fTest -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:49:09 IST" name="configAM" finished-at="2025-08-18T17:49:10 IST" duration-ms="898" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:49:10 IST" name="configBM" finished-at="2025-08-18T17:49:15 IST" duration-ms="4817" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="fragranceHover()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:49:15 IST" name="fragranceHover" finished-at="2025-08-18T17:49:50 IST" duration-ms="35621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- fragranceHover -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Fragrance.FragranceTest@7d20d0b]" started-at="2025-08-18T17:49:50 IST" name="configAM" finished-at="2025-08-18T17:49:51 IST" duration-ms="868" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+      </class> <!-- Fragrance.FragranceTest -->
+      <class name="Accessories.AccessoriesTest">
+        <test-method is-config="true" signature="configBS()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:46:18 IST" name="configBS" finished-at="2025-08-18T17:46:19 IST" duration-ms="795" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBS -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:46:19 IST" name="configBM" finished-at="2025-08-18T17:46:25 IST" duration-ms="6417" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="AccessoriesHover()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:46:25 IST" name="AccessoriesHover" finished-at="2025-08-18T17:47:00 IST" duration-ms="34404" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessoriesHover -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:47:00 IST" name="configAM" finished-at="2025-08-18T17:47:01 IST" duration-ms="1025" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:47:01 IST" name="configBM" finished-at="2025-08-18T17:47:06 IST" duration-ms="4764" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="AccessorieswithPrice()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:47:06 IST" name="AccessorieswithPrice" finished-at="2025-08-18T17:47:57 IST" duration-ms="51086" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AccessorieswithPrice -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:47:57 IST" name="configAM" finished-at="2025-08-18T17:47:58 IST" duration-ms="909" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configAS()[pri:0, instance:Accessories.AccessoriesTest@544fa968]" started-at="2025-08-18T17:51:08 IST" name="configAS" finished-at="2025-08-18T17:51:08 IST" duration-ms="21" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- configAS -->
-      </class> <!-- Fragrance.FragranceTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- Accessories.AccessoriesTest -->
+      <class name="Integration.IntegrationTest">
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Integration.IntegrationTest@41a2befb]" started-at="2025-08-18T17:50:38 IST" name="configBM" finished-at="2025-08-18T17:50:43 IST" duration-ms="5492" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="HomeToJournal()[pri:0, instance:Integration.IntegrationTest@41a2befb]" started-at="2025-08-18T17:50:43 IST" name="HomeToJournal" finished-at="2025-08-18T17:50:52 IST" duration-ms="8907" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomeToJournal -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Integration.IntegrationTest@41a2befb]" started-at="2025-08-18T17:50:52 IST" name="configAM" finished-at="2025-08-18T17:50:53 IST" duration-ms="1244" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+        <test-method is-config="true" signature="configBM()[pri:0, instance:Integration.IntegrationTest@41a2befb]" started-at="2025-08-18T17:50:53 IST" name="configBM" finished-at="2025-08-18T17:50:58 IST" duration-ms="5230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configBM -->
+        <test-method signature="HomeToOurStory()[pri:0, instance:Integration.IntegrationTest@41a2befb]" started-at="2025-08-18T17:50:58 IST" name="HomeToOurStory" finished-at="2025-08-18T17:51:07 IST" duration-ms="9004" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- HomeToOurStory -->
+        <test-method is-config="true" signature="configAM()[pri:0, instance:Integration.IntegrationTest@41a2befb]" started-at="2025-08-18T17:51:07 IST" name="configAM" finished-at="2025-08-18T17:51:08 IST" duration-ms="824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- configAM -->
+      </class> <!-- Integration.IntegrationTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

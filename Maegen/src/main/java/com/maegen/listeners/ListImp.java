@@ -30,7 +30,7 @@ public class ListImp implements ITestListener,ISuiteListener{
 	public void onStart(ISuite suite) {
 		System.out.println("Report Config");
 		spark=new ExtentSparkReporter("./AdvancedReporter/report.html");
-		spark.config().setDocumentTitle("CRM Report");
+		spark.config().setDocumentTitle("Maegen Report");
 		spark.config().setReportName("New Report");
 		spark.config().setTheme(Theme.DARK);
 		report=new ExtentReports();
@@ -66,7 +66,7 @@ public class ListImp implements ITestListener,ISuiteListener{
 	@Override
 	public void onTestFailure(ITestResult result) {
 		String testName=result.getMethod().getMethodName();
-		TakesScreenshot ts=(TakesScreenshot)BaseClass.sdriver;
+		TakesScreenshot ts=(TakesScreenshot)UtilityClassObject.getDriver();
 		String srcfile = ts.getScreenshotAs(OutputType.BASE64);
 		String time=new Date().toString().replace("","_").replace(":","_");
 		test.addScreenCaptureFromBase64String(srcfile,testName+"_"+time);

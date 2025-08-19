@@ -17,8 +17,10 @@ public class AccessoriesPage extends WebDriverUtility {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	 @FindBy(xpath = "//button[text()='Price']")
+	 @FindBy(xpath = "//div[@class='price-range__range-group range-group']//input[@aria-label='From price']")
 	    private WebElement priceFilter;
+	  @FindBy(xpath = "//button[text()='Price']")
+	    private WebElement priceBtn;
 
 	    @FindBy(xpath = "//button[text()='Category']")
 	    private WebElement categoryFilter;
@@ -36,7 +38,9 @@ public class AccessoriesPage extends WebDriverUtility {
 			return driver;
 		}
 
-		
+	    public WebElement getpriceBtn() {
+			return priceBtn;
+		}
 
 		public WebElement getPriceFilter() {
 			return priceFilter;
@@ -91,7 +95,7 @@ public class AccessoriesPage extends WebDriverUtility {
 
 	    	
 	    }
-	    public void SortBy2(String sortData, String productName) {
+	    public void SortBy2(String sortData, String productName) throws InterruptedException {
 	        // Scroll to sort dropdown
 	        JavaScriptExecutorScrollIntoView(driver, getSortDropdown());
 
@@ -101,6 +105,7 @@ public class AccessoriesPage extends WebDriverUtility {
 
 	        // Wait and click the sorting option
 	        By sortOption = By.xpath("//span[contains(@class,'popover__choice-label') and text()='" + sortData + "']");
+	        Thread.sleep(3000);
 	        WebElement sortElement = ExplicitWaitForElementClickableBY(driver, sortOption);
 	        JavaScriptExecutorClick(driver, sortElement); // safer than normal click
 
@@ -117,6 +122,15 @@ public class AccessoriesPage extends WebDriverUtility {
 	        } catch (ElementClickInterceptedException e) {
 	            JavaScriptExecutorClick(driver, productElement);
 	        }
+	    }
+	    public void scrollPrice(String price1) throws InterruptedException {
+	    	WebElement ele = ExplicitWaitForElementClickableReturn(driver,getpriceBtn());
+	    	ele.click();
+	        Thread.sleep(2000);
+	     By  ele1= By.xpath("//div[@class='price-range__range-group range-group']//input[@aria-label='From price']");
+	        WebElement ele2=  ExplicitWaitpresenceOfElementLocated(driver,ele1);
+	        JavaScriptExecutorValue(driver,ele2,price1);
+	       // js.executeScript("arguments[0].value = 25;", toSlider);
 	    }
 	
 

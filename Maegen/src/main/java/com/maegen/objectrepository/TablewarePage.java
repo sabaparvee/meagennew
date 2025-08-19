@@ -16,11 +16,10 @@ public class TablewarePage extends WebDriverUtility {
 	public TablewarePage(WebDriver driver) {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
-	}
-
-    @FindBy(xpath = "//button[text()='Price']")
+	}@FindBy(xpath = "//div[@class='price-range__range-group range-group']//input[@aria-label='From price']")
     private WebElement priceFilter;
-
+	 @FindBy(xpath = "//button[text()='Price']")
+	    private WebElement priceBtn;
     @FindBy(xpath = "//button[text()='Category']")
     private WebElement categoryFilter;
 
@@ -37,7 +36,9 @@ public class TablewarePage extends WebDriverUtility {
 		return driver;
 	}
 
-	
+    public WebElement getpriceBtn() {
+		return priceBtn;
+	}
 
 	public WebElement getPriceFilter() {
 		return priceFilter;
@@ -104,9 +105,8 @@ public class TablewarePage extends WebDriverUtility {
         By sortOption = By.xpath("//span[contains(@class,'popover__choice-label') and text()='" + sortData + "']");
         WebElement sortElement = ExplicitWaitForElementClickableBY(driver, sortOption);
         JavaScriptExecutorClick(driver, sortElement); // safer than normal click
-
-        // Re-locate and wait for the product after sorting
-        By productLocator = By.xpath("//div[contains(@class,'product-item__info  ')]//a[contains(@class,'product-item-meta__title') and contains(text(),'" + productName + "')]");
+        String dynamicXpath = "//div[contains(@class,'product-item__info')]//a[contains(@class,'product-item-meta__title') and contains(text(),\"" + productName + "\")]";
+        By productLocator = By.xpath(dynamicXpath);
         WebElement productElement = ExplicitWaitpresenceOfElementLocated(driver, productLocator);
         JavaScriptExecutorScrollBY(driver,productElement);
         // Scroll into view and adjust for sticky header
@@ -118,5 +118,15 @@ public class TablewarePage extends WebDriverUtility {
         } catch (ElementClickInterceptedException e) {
             JavaScriptExecutorClick(driver, productElement);
         }
+        }
+        public void scrollPrice(String price1) throws InterruptedException {
+	    	WebElement ele = ExplicitWaitForElementClickableReturn(driver,getpriceBtn());
+	    	ele.click();
+	        Thread.sleep(2000);
+	     By  ele1= By.xpath("//div[@class='price-range__range-group range-group']//input[@aria-label='From price']");
+	        WebElement ele2=  ExplicitWaitpresenceOfElementLocated(driver,ele1);
+	        JavaScriptExecutorValue(driver,ele2,price1);
+	       // js.executeScript("arguments[0].value = 25;", toSlider);
+	    }
     }
-}
+
